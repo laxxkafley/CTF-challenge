@@ -1,7 +1,9 @@
 Problem 
+
 Can you crack the password to get the flag?
 
 Hint
+
 There are 100 potential passwords hardcoded in the script. Only one is correct.
 
 First, I downloaded the three files as instructed:
@@ -11,6 +13,7 @@ level4.hash.bin (MD5 hash of the correct password)
 
 
 I used cat level4.py to read the code. 
+
 The function level_4_pw_check() asks for a password, hashes it using MD5, and compares it with the precomputed hash stored in level4.hash.bin.
 
 The encrypted flag is decrypted using a custom XOR function called str_xor, which uses the correct password as the key.
