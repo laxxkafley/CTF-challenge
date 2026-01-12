@@ -1,0 +1,35 @@
+Description
+Can you get the real meaning from this file.
+Download the file here.
+
+✅ Solution
+
+For this challenge, I again started by downloading the file using wget and then used cat to read it.
+
+The output looked like this:
+
+YidkM0JxZGtwQlRYdHFhR3g2YUhsZmF6TnFlVGwzWVROclgyMHdNakV5TnpVNGZRPT0nCg==
+
+
+Right away, it looked like Base64, because of the letters, numbers, and the == at the end. So I decoded it.
+
+After decoding it once, I got:
+
+b'd3BqdkpBTXtqaGx6aHlfazNqeTl3YTNrX20wMjEyNzU4fQ=='
+
+
+But this still looked like Base64. I noticed the b' ' part, so I removed that and decoded the string again.
+
+After decoding it the second time, I got:
+
+wpjvJAM{jhlzhy_k3jy9wa3k_m0212758}
+
+
+At this point, the format with {} looked like a flag, but the text  was still not readable. So I it and tried a Caesar cipher decoder and try many shifts.
+
+After applying the correct shift, it finally decoded to:
+
+picoCTF{caesar_d3cr9pt3d_f0212758}
+
+
+I submitted the flag, and it was correct.
