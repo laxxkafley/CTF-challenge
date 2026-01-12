@@ -1,0 +1,25 @@
+Description
+Decrypt this message.
+Message: message
+
+🧩 Caesar — Spoken Write-up
+✅ Solution
+
+So for this one, the challenge name was Caesar, which already kind of gives a hint.
+First thing I did was download the file using wget, and then I used cat to see what was inside.
+
+When I opened it, I saw this:
+
+picoCTF{bqnrrhmfsgdqtahbnmphkgrwqj}
+
+
+At first glance, it didn’t look readable, but since the challenge is called Caesar, I knew it was probably a Caesar cipher. So what I did was take only the part inside the curly braces and ignore the picoCTF{} part.
+
+Then I went to a Caesar cipher decoder website and tried shifting the text. After trying a few shifts, I finally got something that made sense
+
+{crossingtherubiconqilhsxrk}
+
+
+
+
+Once I saw that readable text, I knew it was correct. I put it back into the flag format and submitted it, and it worked.
